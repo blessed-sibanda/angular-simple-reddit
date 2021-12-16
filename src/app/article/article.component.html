@@ -1,0 +1,25 @@
+<article class="mat-elevation-z1">
+  <div fxLayout.md="row" fxLayoutAlign="start">
+    <div fxLayout="column" fxLayoutAlign="space-between" class="article-points">
+      <div class="votes">{{ article?.votes }}</div>
+      <div>points</div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-between" class="article-info">
+      <div>
+        <div class="mat-header">{{ article?.title }}</div>
+        <small>({{ article?.domain() }})</small>
+      </div>
+      <div class="vote-links" fxLayout.md="row" fxLayoutAlign="start">
+        <a fxLayout="row" fxLayoutAlign="center center" href="">
+          <mat-icon class="icon">arrow_upward</mat-icon>
+          <span>upvote</span>
+        </a>
+        <span class="spacer"></span>
+        <a fxLayout="row" fxLayoutAlign="center center" href="">
+          <mat-icon class="icon">arrow_downward</mat-icon>
+          <span>downvote</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</article>

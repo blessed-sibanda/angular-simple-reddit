@@ -42,3 +42,12 @@
     </mat-card>
   </form>
 </div>
+
+<div fxLayoutAlign="center" fxLayout.md="column">
+  <div fxFlex.lg="40%" fxFlex.md="50%" fxFlex.sm="70%">
+    <app-article
+      *ngFor="let article of articles"
+      [article]="article"
+    ></app-article>
+  </div>
+</div>

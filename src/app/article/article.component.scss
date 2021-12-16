@@ -1,0 +1,45 @@
+article {
+  margin: 0.75em 1em;
+}
+
+.article-points {
+  text-align: center;
+  background-color: rgba(221, 221, 221, 0.575);
+  padding: 1.2em 1.2em 0.5em;
+  margin-right: 0.75em;
+
+  .votes {
+    font-size: 2.4rem;
+    padding-bottom: 0.3em;
+  }
+}
+
+.article-info {
+  padding-top: 0.5em;
+
+  small {
+    color: rgba(0, 0, 0, 0.386);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .vote-links {
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    .icon {
+      margin-right: -0.1em;
+      transform: scale(0.8);
+    }
+  }
+
+  .spacer {
+    margin: 0 0.75em;
+  }
+}
