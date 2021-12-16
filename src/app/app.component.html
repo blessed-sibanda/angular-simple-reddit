@@ -1,53 +1,56 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
+<mat-toolbar color="primary" class="mat-elevation-z5 app-bar">
   <span>{{ title }}</span>
 </mat-toolbar>
 
-<div fxLayout.md="row" fxLayoutAlign="center">
-  <form
-    class="simple-reddit-form"
-    fxFlex.lg="40%"
-    fxFlex.md="50%"
-    fxFlex.sm="70%"
-  >
-    <mat-card
-      fxLayout="column"
-      fxFlexAlign="center"
-      class="simple-reddit-card mat-elevation-z1"
+<main>
+  <div fxLayout.md="row" fxLayoutAlign="center">
+    <form
+      class="simple-reddit-form"
+      fxFlex.lg="40%"
+      fxFlex.md="50%"
+      fxFlex.sm="70%"
+      fxFlex.xs="100%"
     >
-      <h1>Add a Link</h1>
-      <mat-form-field appearance="standard">
-        <mat-label>Title</mat-label>
-        <input
-          matInput
-          placeholder="Enter title"
-          formControlName="title"
-          #titleInput
-        />
-      </mat-form-field>
-
-      <mat-form-field appearance="standard">
-        <mat-label>Link</mat-label>
-        <input matInput #linkInput />
-      </mat-form-field>
-
-      <button
-        (click)="addArticle(titleInput, linkInput)"
-        mat-raised-button
-        class="mat-elevation-z0"
-        color="primary"
-        type="submit"
+      <mat-card
+        fxLayout="column"
+        fxFlexAlign="center"
+        class="simple-reddit-card mat-elevation-z1"
       >
-        Submit
-      </button>
-    </mat-card>
-  </form>
-</div>
+        <h1>Add a Link</h1>
+        <mat-form-field appearance="standard">
+          <mat-label>Title</mat-label>
+          <input
+            matInput
+            placeholder="Enter title"
+            formControlName="title"
+            #titleInput
+          />
+        </mat-form-field>
 
-<div fxLayoutAlign="center" fxLayout.md="column">
-  <div fxFlex.lg="40%" fxFlex.md="50%" fxFlex.sm="70%">
-    <app-article
-      *ngFor="let article of articles"
-      [article]="article"
-    ></app-article>
+        <mat-form-field appearance="standard">
+          <mat-label>Link</mat-label>
+          <input matInput #linkInput />
+        </mat-form-field>
+
+        <button
+          (click)="addArticle(titleInput, linkInput)"
+          mat-raised-button
+          class="mat-elevation-z0"
+          color="primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </mat-card>
+    </form>
   </div>
-</div>
+
+  <div fxLayoutAlign="center" fxLayout.md="column">
+    <div fxFlex.lg="40%" fxFlex.md="50%" fxFlex.sm="70%" fxFlex.xs="100%">
+      <app-article
+        *ngFor="let article of sortedArticles()"
+        [article]="article"
+      ></app-article>
+    </div>
+  </div>
+</main>

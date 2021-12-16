@@ -1,11 +1,17 @@
+.article-wrapper {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 article {
-  margin: 0.75em 1em;
+  margin: 0.75em 0;
 }
 
 .article-points {
   text-align: center;
   background-color: rgba(221, 221, 221, 0.575);
-  padding: 1.2em 1.2em 0.5em;
+  padding: 1.2em 1.8em 0.5em;
   margin-right: 0.75em;
 
   .votes {

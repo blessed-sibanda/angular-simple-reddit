@@ -1,9 +1,21 @@
-.simple-reddit-form {
+main {
   padding: 1em;
+}
+
+.simple-reddit-form {
+  margin-top: 3.5em;
+  padding: 1.2em 0 1em;
 }
 
 .simple-reddit-card {
   display: block;
   max-width: 500px;
   margin: 0 auto;
+}
+.app-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
